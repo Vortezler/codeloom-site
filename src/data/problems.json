@@ -1,0 +1,397 @@
+{
+  "problems": [
+    {
+      "id": "beg-001",
+      "title": "Sum Two Numbers",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions"],
+      "prompt": "Write a function `add(a, b)` that returns the sum of `a` and `b`.",
+      "hint": "Add the two parameters together and return the result — you don't need any conditionals for this one.",
+      "starterCode": "def add(a, b):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "add(2, 3)", "expected": "5" },
+        { "call": "add(-1, 1)", "expected": "0" },
+        { "call": "add(10, 15)", "expected": "25" }
+      ]
+    },
+    {
+      "id": "beg-002",
+      "title": "Even or Odd",
+      "difficulty": "beginner",
+      "topics": ["conditionals", "functions"],
+      "prompt": "Write a function `is_even(n)` that returns `True` if `n` is even, and `False` otherwise.",
+      "hint": "A number is even if dividing it by 2 leaves no remainder. Try the modulo operator `%`.",
+      "starterCode": "def is_even(n):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "is_even(4)", "expected": "True" },
+        { "call": "is_even(7)", "expected": "False" },
+        { "call": "is_even(0)", "expected": "True" }
+      ]
+    },
+    {
+      "id": "beg-003",
+      "title": "Max of Two",
+      "difficulty": "beginner",
+      "topics": ["conditionals", "functions"],
+      "prompt": "Write a function `max_of_two(a, b)` that returns the larger of the two numbers. Do not use the built-in `max()` function.",
+      "hint": "Compare `a` and `b` with an if/else — return whichever one is bigger.",
+      "starterCode": "def max_of_two(a, b):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "max_of_two(3, 7)", "expected": "7" },
+        { "call": "max_of_two(10, 2)", "expected": "10" },
+        { "call": "max_of_two(5, 5)", "expected": "5" }
+      ]
+    },
+    {
+      "id": "beg-004",
+      "title": "Celsius to Fahrenheit",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions"],
+      "prompt": "Write a function `celsius_to_fahrenheit(c)` that converts a Celsius temperature to Fahrenheit using the formula `F = C * 9/5 + 32`. Return the result.",
+      "hint": "Plug `c` straight into the formula and return it. Watch your order of operations: multiply and divide before adding 32.",
+      "starterCode": "def celsius_to_fahrenheit(c):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "celsius_to_fahrenheit(0)", "expected": "32.0" },
+        { "call": "celsius_to_fahrenheit(100)", "expected": "212.0" },
+        { "call": "celsius_to_fahrenheit(37)", "expected": "98.6" }
+      ]
+    },
+    {
+      "id": "beg-005",
+      "title": "String Repeat",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions"],
+      "prompt": "Write a function `repeat_string(s, n)` that returns the string `s` repeated `n` times.",
+      "hint": "Python strings support the `*` operator for repetition — try `s * n`.",
+      "starterCode": "def repeat_string(s, n):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "repeat_string('ab', 3)", "expected": "ababab" },
+        { "call": "repeat_string('x', 0)", "expected": "" },
+        { "call": "repeat_string('hi', 1)", "expected": "hi" }
+      ]
+    },
+    {
+      "id": "beg-006",
+      "title": "Reverse a String",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions"],
+      "prompt": "Write a function `reverse_string(s)` that returns `s` reversed.",
+      "hint": "Slicing with a step of -1 (`s[::-1]`) reverses a string in one line.",
+      "starterCode": "def reverse_string(s):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "reverse_string('hello')", "expected": "olleh" },
+        { "call": "reverse_string('a')", "expected": "a" },
+        { "call": "reverse_string('')", "expected": "" }
+      ]
+    },
+    {
+      "id": "beg-007",
+      "title": "Count Vowels",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions", "conditionals"],
+      "prompt": "Write a function `count_vowels(s)` that returns the number of vowels (`a`, `e`, `i`, `o`, `u` — lowercase only) in `s`.",
+      "hint": "Loop through each character in `s` and check if it's in the string `'aeiou'`.",
+      "starterCode": "def count_vowels(s):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "count_vowels('hello')", "expected": "2" },
+        { "call": "count_vowels('xyz')", "expected": "0" },
+        { "call": "count_vowels('banana')", "expected": "3" }
+      ]
+    },
+    {
+      "id": "beg-008",
+      "title": "FizzBuzz (Single Number)",
+      "difficulty": "beginner",
+      "topics": ["conditionals", "functions"],
+      "prompt": "Write a function `fizzbuzz(n)` that returns `\"Fizz\"` if `n` is divisible by 3, `\"Buzz\"` if divisible by 5, `\"FizzBuzz\"` if divisible by both, or `str(n)` otherwise.",
+      "hint": "Check the FizzBuzz cases in this order: divisible by both 3 and 5 first, then 3, then 5 — otherwise return `str(n)`.",
+      "starterCode": "def fizzbuzz(n):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "fizzbuzz(3)", "expected": "Fizz" },
+        { "call": "fizzbuzz(5)", "expected": "Buzz" },
+        { "call": "fizzbuzz(15)", "expected": "FizzBuzz" },
+        { "call": "fizzbuzz(7)", "expected": "7" }
+      ]
+    },
+    {
+      "id": "beg-009",
+      "title": "Is Palindrome",
+      "difficulty": "beginner",
+      "topics": ["conditionals", "functions"],
+      "prompt": "Write a function `is_palindrome(s)` that returns `True` if `s` reads the same forwards and backwards, and `False` otherwise.",
+      "hint": "Compare `s` to its reverse (`s[::-1]`) — if they're equal, it's a palindrome.",
+      "starterCode": "def is_palindrome(s):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "is_palindrome('racecar')", "expected": "True" },
+        { "call": "is_palindrome('hello')", "expected": "False" },
+        { "call": "is_palindrome('a')", "expected": "True" }
+      ]
+    },
+    {
+      "id": "beg-010",
+      "title": "Grade Converter",
+      "difficulty": "beginner",
+      "topics": ["conditionals", "functions"],
+      "prompt": "Write a function `letter_grade(score)` that returns `\"A\"` for 90+, `\"B\"` for 80-89, `\"C\"` for 70-79, `\"D\"` for 60-69, and `\"F\"` below 60.",
+      "hint": "Use if/elif/else and check the highest grade boundary first (90+), working your way down.",
+      "starterCode": "def letter_grade(score):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "letter_grade(95)", "expected": "A" },
+        { "call": "letter_grade(82)", "expected": "B" },
+        { "call": "letter_grade(55)", "expected": "F" },
+        { "call": "letter_grade(70)", "expected": "C" }
+      ]
+    },
+    {
+      "id": "int-001",
+      "title": "Sum of a List",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `sum_list(nums)` that returns the sum of all numbers in the list `nums` using a loop (don't use the built-in `sum()`).",
+      "hint": "Start a `total` variable at 0, then loop through `nums` adding each value to it.",
+      "starterCode": "def sum_list(nums):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "sum_list([1, 2, 3])", "expected": "6" },
+        { "call": "sum_list([])", "expected": "0" },
+        { "call": "sum_list([10, -5, 5])", "expected": "10" }
+      ]
+    },
+    {
+      "id": "int-002",
+      "title": "Find the Maximum",
+      "difficulty": "intermediate",
+      "topics": ["loops", "conditionals"],
+      "prompt": "Write a function `find_max(nums)` that returns the largest number in the list `nums`, without using the built-in `max()`. Assume the list has at least one item.",
+      "hint": "Start by assuming the first item is the largest, then loop through the rest and update your answer whenever you find something bigger.",
+      "starterCode": "def find_max(nums):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "find_max([3, 7, 2])", "expected": "7" },
+        { "call": "find_max([-5, -1, -10])", "expected": "-1" },
+        { "call": "find_max([4])", "expected": "4" }
+      ]
+    },
+    {
+      "id": "int-003",
+      "title": "Count Occurrences",
+      "difficulty": "intermediate",
+      "topics": ["loops", "conditionals"],
+      "prompt": "Write a function `count_occurrences(lst, target)` that returns how many times `target` appears in `lst`.",
+      "hint": "Start a counter at 0 and loop through `lst`, adding 1 every time you see `target`.",
+      "starterCode": "def count_occurrences(lst, target):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "count_occurrences([1, 2, 2, 3, 2], 2)", "expected": "3" },
+        { "call": "count_occurrences(['a', 'b'], 'c')", "expected": "0" },
+        { "call": "count_occurrences([], 1)", "expected": "0" }
+      ]
+    },
+    {
+      "id": "int-004",
+      "title": "Factorial",
+      "difficulty": "intermediate",
+      "topics": ["loops", "functions"],
+      "prompt": "Write a function `factorial(n)` that returns `n!` (the product of all integers from 1 to `n`). `factorial(0)` should return `1`.",
+      "hint": "Multiply numbers from 1 up to `n` together in a loop, starting your running product at 1 (not 0!).",
+      "starterCode": "def factorial(n):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "factorial(5)", "expected": "120" },
+        { "call": "factorial(0)", "expected": "1" },
+        { "call": "factorial(6)", "expected": "720" }
+      ]
+    },
+    {
+      "id": "int-005",
+      "title": "Fibonacci Number",
+      "difficulty": "intermediate",
+      "topics": ["loops", "functions"],
+      "prompt": "Write a function `fibonacci(n)` that returns the `n`th number in the Fibonacci sequence (0-indexed: `fibonacci(0) = 0`, `fibonacci(1) = 1`).",
+      "hint": "Keep track of the two most recent Fibonacci numbers and update them together each loop iteration.",
+      "starterCode": "def fibonacci(n):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "fibonacci(0)", "expected": "0" },
+        { "call": "fibonacci(1)", "expected": "1" },
+        { "call": "fibonacci(7)", "expected": "13" }
+      ]
+    },
+    {
+      "id": "int-006",
+      "title": "Filter Evens",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `filter_evens(nums)` that returns a new list containing only the even numbers from `nums`, in the same order.",
+      "hint": "Loop through `nums`, and use `.append()` to add a number to a new list only if it's even.",
+      "starterCode": "def filter_evens(nums):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "filter_evens([1, 2, 3, 4, 5, 6])", "expected": "[2, 4, 6]" },
+        { "call": "filter_evens([1, 3, 5])", "expected": "[]" },
+        { "call": "filter_evens([2, 4])", "expected": "[2, 4]" }
+      ]
+    },
+    {
+      "id": "int-007",
+      "title": "Word Frequency",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `word_count(s)` that returns a dictionary mapping each word in `s` (split by spaces) to how many times it appears.",
+      "hint": "Split `s` into words with `.split()`, then loop through them, using a dictionary to count how many times you've seen each one.",
+      "starterCode": "def word_count(s):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "word_count('the cat sat on the mat')", "expected": "{'the': 2, 'cat': 1, 'sat': 1, 'on': 1, 'mat': 1}" },
+        { "call": "word_count('a a b')", "expected": "{'a': 2, 'b': 1}" },
+        { "call": "word_count('')", "expected": "{}" }
+      ]
+    },
+    {
+      "id": "int-008",
+      "title": "Prime Checker",
+      "difficulty": "intermediate",
+      "topics": ["loops", "conditionals"],
+      "prompt": "Write a function `is_prime(n)` that returns `True` if `n` is a prime number (greater than 1, only divisible by 1 and itself), and `False` otherwise.",
+      "hint": "A number is prime if nothing between 2 and n-1 divides it evenly. Don't forget numbers less than 2 aren't prime!",
+      "starterCode": "def is_prime(n):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "is_prime(7)", "expected": "True" },
+        { "call": "is_prime(1)", "expected": "False" },
+        { "call": "is_prime(12)", "expected": "False" },
+        { "call": "is_prime(2)", "expected": "True" }
+      ]
+    },
+    {
+      "id": "int-009",
+      "title": "Remove Duplicates",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `remove_duplicates(lst)` that returns a new list with duplicate values removed, keeping only the first occurrence of each value (preserve order).",
+      "hint": "Loop through `lst` and build a new list, only adding a value if it isn't already in your new list.",
+      "starterCode": "def remove_duplicates(lst):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "remove_duplicates([1, 2, 2, 3, 1, 4])", "expected": "[1, 2, 3, 4]" },
+        { "call": "remove_duplicates([])", "expected": "[]" },
+        { "call": "remove_duplicates([5, 5, 5])", "expected": "[5]" }
+      ]
+    },
+    {
+      "id": "int-010",
+      "title": "Caesar Cipher",
+      "difficulty": "intermediate",
+      "topics": ["loops", "conditionals"],
+      "prompt": "Write a function `caesar_encrypt(s, shift)` that shifts each lowercase letter in `s` forward by `shift` positions in the alphabet, wrapping around from `z` back to `a`. Leave any non-lowercase-letter characters unchanged.",
+      "hint": "For each character, check if it's a lowercase letter. If so, shift it using its position in the alphabet and wrap around with the modulo operator (`% 26`).",
+      "starterCode": "def caesar_encrypt(s, shift):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "caesar_encrypt('abc', 1)", "expected": "bcd" },
+        { "call": "caesar_encrypt('xyz', 3)", "expected": "abc" },
+        { "call": "caesar_encrypt('hello world', 2)", "expected": "jgnnq yqtnf" }
+      ]
+    },
+    {
+      "id": "adv-001",
+      "title": "Basic Class: Dog",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Dog` class so that `Dog(name)` creates a dog with that name, and `.bark()` returns the string `\"{name} says Woof!\"` (e.g. `\"Rex says Woof!\"`).",
+      "hint": "In `__init__`, save `name` as `self.name`. In `bark`, use an f-string like `f\"{self.name} says Woof!\"`.",
+      "starterCode": "class Dog:\n    def __init__(self, name):\n        # your code here\n        pass\n\n    def bark(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Dog('Rex').bark()", "expected": "Rex says Woof!" },
+        { "call": "Dog('Fido').bark()", "expected": "Fido says Woof!" }
+      ]
+    },
+    {
+      "id": "adv-002",
+      "title": "Rectangle Class",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Rectangle` class: `Rectangle(width, height)` stores both, `.area()` returns `width * height`, and `.perimeter()` returns `2 * (width + height)`.",
+      "hint": "Store `width` and `height` as `self.width` / `self.height` in `__init__`, then use them in `area` and `perimeter`.",
+      "starterCode": "class Rectangle:\n    def __init__(self, width, height):\n        # your code here\n        pass\n\n    def area(self):\n        # your code here\n        pass\n\n    def perimeter(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Rectangle(3, 4).area()", "expected": "12" },
+        { "call": "Rectangle(3, 4).perimeter()", "expected": "14" },
+        { "call": "Rectangle(5, 5).area()", "expected": "25" }
+      ]
+    },
+    {
+      "id": "adv-003",
+      "title": "Inheritance: Animal Sounds",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "The `Animal` base class has a `speak()` method that returns `\"...\"`. Complete `Dog` and `Cat`, which inherit from `Animal` and override `speak()` to return `\"Woof!\"` and `\"Meow!\"` respectively.",
+      "hint": "Overriding just means writing a new `speak` method in the subclass — it doesn't need to call the parent's version.",
+      "starterCode": "class Animal:\n    def speak(self):\n        return \"...\"\n\n\nclass Dog(Animal):\n    def speak(self):\n        # your code here\n        pass\n\n\nclass Cat(Animal):\n    def speak(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Dog().speak()", "expected": "Woof!" },
+        { "call": "Cat().speak()", "expected": "Meow!" },
+        { "call": "Animal().speak()", "expected": "..." }
+      ]
+    },
+    {
+      "id": "adv-004",
+      "title": "Static Variable: Counter",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Counter` class so that every time a new `Counter()` is created, the class variable `count` increases by 1. Add a method `get_count()` that returns the current value of `count`.",
+      "hint": "In `__init__`, increase the class variable with `Counter.count += 1` (not `self.count`, which would create a separate instance variable).",
+      "starterCode": "class Counter:\n    count = 0\n\n    def __init__(self):\n        # your code here (increase Counter.count by 1)\n        pass\n\n    def get_count(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "(setattr(Counter, 'count', 0), [Counter() for _ in range(3)][-1].get_count())[-1]", "expected": "3" },
+        { "call": "(setattr(Counter, 'count', 0), [Counter() for _ in range(1)][-1].get_count())[-1]", "expected": "1" }
+      ]
+    },
+    {
+      "id": "adv-005",
+      "title": "Bank Account",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `BankAccount` class: `BankAccount(balance)` stores the starting balance. `.deposit(amount)` adds to the balance. `.withdraw(amount)` subtracts from the balance, but does nothing if `amount` is greater than the current balance. `.balance` should always reflect the current balance.",
+      "hint": "Store `balance` as `self.balance`. In `withdraw`, check `if amount <= self.balance` before subtracting.",
+      "starterCode": "class BankAccount:\n    def __init__(self, balance):\n        # your code here\n        pass\n\n    def deposit(self, amount):\n        # your code here\n        pass\n\n    def withdraw(self, amount):\n        # your code here (do nothing if amount > balance)\n        pass",
+      "testCases": [
+        { "call": "(acc := BankAccount(100), acc.deposit(50), acc.balance)[-1]", "expected": "150" },
+        { "call": "(acc := BankAccount(100), acc.withdraw(30), acc.balance)[-1]", "expected": "70" },
+        { "call": "(acc := BankAccount(50), acc.withdraw(100), acc.balance)[-1]", "expected": "50" }
+      ]
+    },
+    {
+      "id": "adv-006",
+      "title": "Student Average",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Student` class: `Student(name)` stores the name and starts with an empty list of grades. `.add_grade(score)` adds a score to the list. `.average()` returns the average of all grades as a float (return `0.0` if there are no grades).",
+      "hint": "Store an empty list in `__init__`. `add_grade` appends to it. `average` divides the sum of the list by its length — but check for an empty list first to avoid dividing by zero.",
+      "starterCode": "class Student:\n    def __init__(self, name):\n        # your code here\n        pass\n\n    def add_grade(self, score):\n        # your code here\n        pass\n\n    def average(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "(s := Student('Ada'), s.add_grade(90), s.add_grade(80), s.average())[-1]", "expected": "85.0" },
+        { "call": "(s := Student('Lin'), s.average())[-1]", "expected": "0.0" },
+        { "call": "(s := Student('Sam'), s.add_grade(100), s.add_grade(50), s.add_grade(90), s.average())[-1]", "expected": "80.0" }
+      ]
+    },
+    {
+      "id": "adv-007",
+      "title": "Inheritance with super(): Vehicle",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Vehicle` base class: `Vehicle(wheels)` stores the number of wheels. Then complete `Car`, which inherits from `Vehicle`. `Car(brand)` should call `Vehicle.__init__` with `4` wheels (using `super()`) and also store `brand`. Add a method `describe()` on `Car` that returns `\"{brand} car with {wheels} wheels\"`.",
+      "hint": "Inside `Car.__init__`, call `super().__init__(4)` first, then set `self.brand = brand`.",
+      "starterCode": "class Vehicle:\n    def __init__(self, wheels):\n        # your code here\n        pass\n\n\nclass Car(Vehicle):\n    def __init__(self, brand):\n        # your code here (call super().__init__ with 4 wheels, then store brand)\n        pass\n\n    def describe(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Car('Toyota').describe()", "expected": "Toyota car with 4 wheels" },
+        { "call": "Car('Honda').describe()", "expected": "Honda car with 4 wheels" },
+        { "call": "Car('Ford').wheels", "expected": "4" }
+      ]
+    },
+    {
+      "id": "adv-008",
+      "title": "Point Distance",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Point` class: `Point(x, y)` stores the coordinates. Add a method `distance_to(other)` that returns the Euclidean distance between `self` and `other` (another `Point`). (`import math` is available for `math.sqrt`.)",
+      "hint": "The distance formula is `math.sqrt((x2 - x1)**2 + (y2 - y1)**2)` — use `self.x`/`self.y` and `other.x`/`other.y`.",
+      "starterCode": "import math\n\nclass Point:\n    def __init__(self, x, y):\n        # your code here\n        pass\n\n    def distance_to(self, other):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Point(0, 0).distance_to(Point(3, 4))", "expected": "5.0" },
+        { "call": "Point(0, 0).distance_to(Point(0, 0))", "expected": "0.0" },
+        { "call": "Point(1, 1).distance_to(Point(4, 5))", "expected": "5.0" }
+      ]
+    }
+  ]
+}

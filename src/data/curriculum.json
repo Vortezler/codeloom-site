@@ -1,0 +1,166 @@
+{
+  "units": [
+    {
+      "id": "unit-1",
+      "title": "Unit 1: Basics of Python",
+      "summary": "Print statements, operators, and data types — the building blocks every Python program starts from.",
+      "concepts": [
+        "Print statements",
+        "Operators",
+        "Data types and the rules around them",
+        "The newline character (\\n)",
+        "Combining data types in a print statement"
+      ],
+      "projects": [
+        {
+          "title": "Digital Business Card",
+          "description": "Print a personal digital business card — name, age, school, hobby, contact info — in a clean, organized layout using print statements, variables, and formatting."
+        },
+        {
+          "title": "Game Character Profile",
+          "description": "Display a video game character's stats (health, attack, defense, inventory value) using variables and calculations, formatted like an in-game profile screen."
+        },
+        {
+          "title": "Restaurant Receipt Generator",
+          "description": "Print a realistic restaurant receipt showing menu items, prices, subtotal, tax, and final total — built with operators."
+        }
+      ],
+      "lessonNotes": "[TODO: fill in lesson content]"
+    },
+    {
+      "id": "unit-2",
+      "title": "Unit 2: Strings and Input",
+      "summary": "Taking input from the user and going deep on strings — concatenation, slicing, indexing, and string methods.",
+      "concepts": [
+        "Getting input (and input types)",
+        "Converting data types from input",
+        "Strings in depth: concatenation, slicing, indexing, escape characters",
+        "Boolean-returning string functions (upper, lower, isdigit, and more)"
+      ],
+      "projects": [
+        {
+          "title": "Interactive Profile Creator",
+          "description": "The Unit 1 business card project, but interactive — ask the user for their info with input() and display it as a formatted profile card. Include decorators."
+        },
+        {
+          "title": "Movie Ticket Generator",
+          "description": "Collect a customer's name, movie choice, seat, and number of tickets, then print a professional-looking movie ticket with the total price (movie list and prices provided). Decorators optional."
+        },
+        {
+          "title": "Social Media Sign-Up Analyzer",
+          "description": "Collect a username, password, and bio, then display a profile that also analyzes the username — its length, an uppercase version, and a lowercase version — using string methods and booleans."
+        }
+      ],
+      "lessonNotes": "[TODO: fill in lesson content]"
+    },
+    {
+      "id": "unit-3",
+      "title": "Unit 3: Data Collections",
+      "summary": "Lists, tuples, dictionaries, and sets — organizing and nesting real data, plus the random and math modules.",
+      "concepts": [
+        "Each data collection type in depth (lists, tuples, dictionaries, sets)",
+        "Nesting data collections",
+        "Operators on collections",
+        "Useful functions (range, upper, lower, isdigit, and more)",
+        "The random module",
+        "Math functions"
+      ],
+      "projects": [
+        {
+          "title": "Digital Vacation Planner",
+          "description": "Store an upcoming trip's details — destinations, packing list, travel dates, traveler info — across different data collection types, then display it all as a clean travel itinerary."
+        },
+        {
+          "title": "Grocery Store Checkout",
+          "description": "Build a menu or store with items stored in a dictionary (item: price). Let the user add items to a cart list, then print a receipt with subtotal, 5% tax, and total."
+        },
+        {
+          "title": "[TODO: add project name]",
+          "description": "[TODO: not yet defined]"
+        }
+      ],
+      "lessonNotes": "[TODO: fill in lesson content]"
+    },
+    {
+      "id": "unit-4",
+      "title": "Unit 4: Loops & Conditionals",
+      "summary": "For loops, while loops, nesting, and if/elif/else — the logic that lets programs make decisions and repeat themselves.",
+      "concepts": [
+        "For loops",
+        "While loops",
+        "Nested loops",
+        "Conditionals: if, elif, else"
+      ],
+      "projects": [
+        {
+          "title": "Number Guessing Game",
+          "description": "A 1-player or 2-player game with at least 3 difficulty levels, each with its own number range and guess limit. The program picks a random number and tells the player higher/lower after each guess."
+        },
+        {
+          "title": "Roulette / Russian Roulette",
+          "description": "Two variants: a roulette gambling game where the player bets on a color or number against a random spin (35x payout on a number, 2x on a color), or a multiplayer Russian Roulette where each player picks a slot and a random draw eliminates one per round."
+        },
+        {
+          "title": "Rock Paper Scissors",
+          "description": "A rock-paper-scissors game supporting both 2-player and player-vs-computer modes."
+        },
+        {
+          "title": "Restaurant Receipt Generator (v2)",
+          "description": "The Unit 1 receipt project again, but now interactive — take menu items via input and use loops over lists to build and print the receipt."
+        }
+      ],
+      "lessonNotes": "[TODO: fill in lesson content]"
+    },
+    {
+      "id": "unit-5",
+      "title": "Unit 5: Functions",
+      "summary": "Built-in and custom functions — how to break a program into reusable, well-named pieces.",
+      "concepts": [
+        "Useful built-in functions (range, upper, lower, isdigit, and more)",
+        "Writing custom functions"
+      ],
+      "projects": [
+        {
+          "title": "Trivia Game with Team Scoring",
+          "description": "Randomly pull questions from a pool and take answers via input. Track points per team and question type, then display a winner, the top 3, and full team placements."
+        },
+        {
+          "title": "Movie Average Rating Calculator",
+          "description": "Calculate and display the average rating for a movie from a set of individual ratings."
+        },
+        {
+          "title": "[TODO: add project name]",
+          "description": "[TODO: not yet defined]"
+        }
+      ],
+      "lessonNotes": "[TODO: fill in lesson content]"
+    },
+    {
+      "id": "unit-6",
+      "title": "Unit 6: Object-Oriented Programming",
+      "summary": "Classes, methods, attributes, inheritance, and static variables — modeling real things as objects in code.",
+      "concepts": [
+        "Classes and objects",
+        "The __init__ constructor",
+        "Methods and attributes",
+        "Inheritance",
+        "Static variables"
+      ],
+      "projects": [
+        {
+          "title": "Dungeons & Dragons Boss Fight",
+          "description": "A turn-based boss fight using dice rolls: the player chooses attacks and rolls a d20 each turn (1-4 miss, 5-13 hit, 14-17 crit, 18-20 a 1.5x crit) while the boss fights back with its own random, dice-rolled attacks. Includes a one-time-use attack that deals the most damage."
+        },
+        {
+          "title": "Battleship vs Computer",
+          "description": "A Battleship game where both the player and computer get randomly placed ships, and the player must sink all computer ships before theirs are sunk."
+        },
+        {
+          "title": "[TODO: add project name]",
+          "description": "[TODO: not yet defined]"
+        }
+      ],
+      "lessonNotes": "[TODO: fill in lesson content]"
+    }
+  ]
+}

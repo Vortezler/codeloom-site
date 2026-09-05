@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b1120;
+  --color-surface: #131a2b;
+  --color-surface-raised: #1a2338;
+  --color-border: #263149;
+  --color-border-hover: #3a4763;
+  --color-text: #e5e9f0;
+  --color-text-muted: #94a3b8;
+  --color-accent: #c8862f;
+  --color-accent-hover: #a86f27;
+  --color-accent-muted: #3d2a12;
+  --color-teal: #45a394;
+  --color-teal-muted: #12302c;
+  --color-danger: #e0736c;
+  --color-success: #4fae82;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* CodeMirror container sizing */
+.cm-editor {
+  height: 100%;
+  font-size: 0.875rem;
+}
+.cm-scroller {
+  overflow: auto;
+}
