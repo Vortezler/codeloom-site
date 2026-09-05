@@ -143,6 +143,106 @@
       ]
     },
     {
+      "id": "beg-011",
+      "title": "Area of a Rectangle",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions"],
+      "prompt": "Write a function `area(width, height)` that returns the area of a rectangle: `width * height`.",
+      "hint": "Multiply the two parameters together and return the result.",
+      "starterCode": "def area(width, height):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "area(3, 4)", "expected": "12" },
+        { "call": "area(5, 5)", "expected": "25" },
+        { "call": "area(1, 10)", "expected": "10" }
+      ]
+    },
+    {
+      "id": "beg-012",
+      "title": "Is Positive",
+      "difficulty": "beginner",
+      "topics": ["conditionals", "functions"],
+      "prompt": "Write a function `is_positive(n)` that returns `True` if `n` is greater than 0, and `False` otherwise.",
+      "hint": "A simple comparison (`n > 0`) already gives you a boolean — you can return it directly.",
+      "starterCode": "def is_positive(n):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "is_positive(5)", "expected": "True" },
+        { "call": "is_positive(-3)", "expected": "False" },
+        { "call": "is_positive(0)", "expected": "False" }
+      ]
+    },
+    {
+      "id": "beg-013",
+      "title": "Minutes to Hours and Minutes",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions"],
+      "prompt": "Write a function `format_time(minutes)` that converts a number of minutes into a string `\"Xh Ym\"` — for example, `format_time(125)` should return `\"2h 5m\"`.",
+      "hint": "Use `//` to find the whole hours and `%` to find the leftover minutes.",
+      "starterCode": "def format_time(minutes):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "format_time(125)", "expected": "2h 5m" },
+        { "call": "format_time(60)", "expected": "1h 0m" },
+        { "call": "format_time(45)", "expected": "0h 45m" }
+      ]
+    },
+    {
+      "id": "beg-014",
+      "title": "Leap Year Checker",
+      "difficulty": "beginner",
+      "topics": ["conditionals", "functions"],
+      "prompt": "Write a function `is_leap_year(year)` that returns `True` if `year` is a leap year. A year is a leap year if it's divisible by 4, except years divisible by 100 — unless they're also divisible by 400.",
+      "hint": "Check divisibility with `%`. The rule is: divisible by 4 AND (not divisible by 100 OR divisible by 400).",
+      "starterCode": "def is_leap_year(year):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "is_leap_year(2020)", "expected": "True" },
+        { "call": "is_leap_year(1900)", "expected": "False" },
+        { "call": "is_leap_year(2000)", "expected": "True" },
+        { "call": "is_leap_year(2023)", "expected": "False" }
+      ]
+    },
+    {
+      "id": "beg-015",
+      "title": "Tip Calculator",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions"],
+      "prompt": "Write a function `calculate_tip(bill, percent)` that returns the tip amount: `bill * percent / 100`.",
+      "hint": "This is a direct formula — no conditionals needed, just multiply and divide.",
+      "starterCode": "def calculate_tip(bill, percent):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "calculate_tip(100, 15)", "expected": "15.0" },
+        { "call": "calculate_tip(50, 20)", "expected": "10.0" },
+        { "call": "calculate_tip(80, 10)", "expected": "8.0" }
+      ]
+    },
+    {
+      "id": "beg-016",
+      "title": "First and Last Character",
+      "difficulty": "beginner",
+      "topics": ["variables", "functions"],
+      "prompt": "Write a function `first_last(s)` that returns a new string made of `s`'s first character followed by its last character.",
+      "hint": "Use indexing: `s[0]` for the first character and `s[-1]` for the last.",
+      "starterCode": "def first_last(s):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "first_last('hello')", "expected": "ho" },
+        { "call": "first_last('a')", "expected": "aa" },
+        { "call": "first_last('python')", "expected": "pn" }
+      ]
+    },
+    {
+      "id": "beg-017",
+      "title": "Temperature Warning",
+      "difficulty": "beginner",
+      "topics": ["conditionals", "functions"],
+      "prompt": "Write a function `temp_warning(temp)` that returns `\"Cold\"` if `temp` is below 50, `\"Warm\"` if `temp` is between 50 and 79 (inclusive), and `\"Hot\"` if `temp` is 80 or above.",
+      "hint": "Use if/elif/else and check the boundaries carefully — try the lowest range first.",
+      "starterCode": "def temp_warning(temp):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "temp_warning(30)", "expected": "Cold" },
+        { "call": "temp_warning(65)", "expected": "Warm" },
+        { "call": "temp_warning(90)", "expected": "Hot" },
+        { "call": "temp_warning(50)", "expected": "Warm" }
+      ]
+    },
+    {
       "id": "int-001",
       "title": "Sum of a List",
       "difficulty": "intermediate",
@@ -284,6 +384,104 @@
       ]
     },
     {
+      "id": "int-011",
+      "title": "Average of a List",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `average(nums)` that returns the average of the numbers in `nums` as a float, using a loop (assume the list is non-empty).",
+      "hint": "Add up all the numbers in a loop, then divide the total by `len(nums)`.",
+      "starterCode": "def average(nums):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "average([1, 2, 3])", "expected": "2.0" },
+        { "call": "average([10, 20])", "expected": "15.0" },
+        { "call": "average([5])", "expected": "5.0" }
+      ]
+    },
+    {
+      "id": "int-012",
+      "title": "Longest Word",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `longest_word(sentence)` that returns the longest word in `sentence` (split by spaces). If there's a tie, return the first one.",
+      "hint": "Split the sentence into words, then loop through them keeping track of the longest one seen so far (use `>` so ties keep the first).",
+      "starterCode": "def longest_word(sentence):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "longest_word('the quick brown fox')", "expected": "quick" },
+        { "call": "longest_word('a bb ccc')", "expected": "ccc" },
+        { "call": "longest_word('cat dog')", "expected": "cat" }
+      ]
+    },
+    {
+      "id": "int-013",
+      "title": "Sum of Digits",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `sum_digits(n)` that returns the sum of the digits of a non-negative integer `n`.",
+      "hint": "Use `% 10` to grab the last digit and `// 10` to chop it off, repeating in a loop until `n` is 0.",
+      "starterCode": "def sum_digits(n):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "sum_digits(123)", "expected": "6" },
+        { "call": "sum_digits(0)", "expected": "0" },
+        { "call": "sum_digits(9999)", "expected": "36" }
+      ]
+    },
+    {
+      "id": "int-014",
+      "title": "Second Largest",
+      "difficulty": "intermediate",
+      "topics": ["loops", "conditionals"],
+      "prompt": "Write a function `second_largest(nums)` that returns the second largest value in `nums` when sorted from high to low (assume at least 2 items).",
+      "hint": "Track the largest and second-largest as you loop through once, or take a shortcut with `sorted(nums, reverse=True)[1]`.",
+      "starterCode": "def second_largest(nums):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "second_largest([3, 1, 4, 1, 5, 9, 2, 6])", "expected": "6" },
+        { "call": "second_largest([1, 2])", "expected": "1" },
+        { "call": "second_largest([10, 20, 30])", "expected": "20" }
+      ]
+    },
+    {
+      "id": "int-015",
+      "title": "Merge Two Sorted Lists",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `merge_sorted(a, b)` that merges two already-sorted lists into one sorted list.",
+      "hint": "You can walk both lists together comparing front elements, or take a shortcut since both are already sorted: `sorted(a + b)`.",
+      "starterCode": "def merge_sorted(a, b):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "merge_sorted([1, 3, 5], [2, 4, 6])", "expected": "[1, 2, 3, 4, 5, 6]" },
+        { "call": "merge_sorted([], [1, 2])", "expected": "[1, 2]" },
+        { "call": "merge_sorted([1, 2, 3], [])", "expected": "[1, 2, 3]" }
+      ]
+    },
+    {
+      "id": "int-016",
+      "title": "Rotate List Left",
+      "difficulty": "intermediate",
+      "topics": ["loops", "variables"],
+      "prompt": "Write a function `rotate_left(lst, k)` that rotates `lst` to the left by `k` positions. For example, `rotate_left([1, 2, 3, 4, 5], 2)` returns `[3, 4, 5, 1, 2]`.",
+      "hint": "Use `k = k % len(lst)` first to handle a `k` bigger than the list, then slice: `lst[k:] + lst[:k]`.",
+      "starterCode": "def rotate_left(lst, k):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "rotate_left([1, 2, 3, 4, 5], 2)", "expected": "[3, 4, 5, 1, 2]" },
+        { "call": "rotate_left([1, 2, 3], 0)", "expected": "[1, 2, 3]" },
+        { "call": "rotate_left([1, 2, 3], 3)", "expected": "[1, 2, 3]" }
+      ]
+    },
+    {
+      "id": "int-017",
+      "title": "Anagram Checker",
+      "difficulty": "intermediate",
+      "topics": ["loops", "conditionals"],
+      "prompt": "Write a function `is_anagram(a, b)` that returns `True` if `a` and `b` are anagrams of each other (same letters, same counts, ignoring case), and `False` otherwise. Assume no spaces.",
+      "hint": "Try comparing `sorted(a.lower())` to `sorted(b.lower())`.",
+      "starterCode": "def is_anagram(a, b):\n    # your code here\n    pass",
+      "testCases": [
+        { "call": "is_anagram('listen', 'silent')", "expected": "True" },
+        { "call": "is_anagram('hello', 'world')", "expected": "False" },
+        { "call": "is_anagram('Dormitory', 'dirtyroom')", "expected": "True" }
+      ]
+    },
+    {
       "id": "adv-001",
       "title": "Basic Class: Dog",
       "difficulty": "advanced",
@@ -391,6 +589,119 @@
         { "call": "Point(0, 0).distance_to(Point(3, 4))", "expected": "5.0" },
         { "call": "Point(0, 0).distance_to(Point(0, 0))", "expected": "0.0" },
         { "call": "Point(1, 1).distance_to(Point(4, 5))", "expected": "5.0" }
+      ]
+    },
+    {
+      "id": "adv-009",
+      "title": "Stack Class",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Stack` class: it starts empty. `.push(item)` adds an item to the top. `.pop()` removes and returns the top item. `.peek()` returns the top item without removing it. `.is_empty()` returns `True` if the stack has no items.",
+      "hint": "Store the items in a list (e.g. `self.items = []`). `push` appends, `pop` and `peek` both look at `self.items[-1]` — `pop` also removes it.",
+      "starterCode": "class Stack:\n    def __init__(self):\n        # your code here\n        pass\n\n    def push(self, item):\n        # your code here\n        pass\n\n    def pop(self):\n        # your code here\n        pass\n\n    def peek(self):\n        # your code here\n        pass\n\n    def is_empty(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "(s := Stack(), s.push(1), s.push(2), s.pop())[-1]", "expected": "2" },
+        { "call": "(s := Stack(), s.push(5), s.push(9), s.peek())[-1]", "expected": "9" },
+        { "call": "Stack().is_empty()", "expected": "True" }
+      ]
+    },
+    {
+      "id": "adv-010",
+      "title": "Circle Class",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Circle` class: `Circle(radius)` stores the radius. `.area()` returns π × radius², rounded to 2 decimal places. `.circumference()` returns 2 × π × radius, rounded to 2 decimal places. (`import math` is available for `math.pi`.)",
+      "hint": "Use `round(math.pi * self.radius ** 2, 2)` for area, and a similar formula with `round(..., 2)` for circumference.",
+      "starterCode": "import math\n\nclass Circle:\n    def __init__(self, radius):\n        # your code here\n        pass\n\n    def area(self):\n        # your code here\n        pass\n\n    def circumference(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Circle(3).area()", "expected": "28.27" },
+        { "call": "Circle(3).circumference()", "expected": "18.85" },
+        { "call": "Circle(5).area()", "expected": "78.54" }
+      ]
+    },
+    {
+      "id": "adv-011",
+      "title": "Employee Raise",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Employee` class: `Employee(name, salary)` stores both. `.give_raise(percent)` increases `salary` by `percent`% (i.e. `salary + salary * percent / 100`).",
+      "hint": "Set `self.salary = self.salary + self.salary * percent / 100` inside `give_raise`.",
+      "starterCode": "class Employee:\n    def __init__(self, name, salary):\n        # your code here\n        pass\n\n    def give_raise(self, percent):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "(e := Employee('Ana', 1000), e.give_raise(50), e.salary)[-1]", "expected": "1500.0" },
+        { "call": "(e := Employee('Bo', 2000), e.give_raise(10), e.salary)[-1]", "expected": "2200.0" },
+        { "call": "(e := Employee('Cy', 800), e.give_raise(25), e.salary)[-1]", "expected": "1000.0" }
+      ]
+    },
+    {
+      "id": "adv-012",
+      "title": "Playlist Class",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Playlist` class: it starts with an empty list of songs called `songs`. `.add_song(title)` adds a song title to the end. `.remove_song(title)` removes it if present. `.song_count()` returns how many songs are in the playlist.",
+      "hint": "Store titles in `self.songs = []`. `add_song` appends, `remove_song` can use `self.songs.remove(title)`, and `song_count` returns `len(self.songs)`.",
+      "starterCode": "class Playlist:\n    def __init__(self):\n        # your code here\n        pass\n\n    def add_song(self, title):\n        # your code here\n        pass\n\n    def remove_song(self, title):\n        # your code here\n        pass\n\n    def song_count(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "(p := Playlist(), p.add_song('A'), p.add_song('B'), p.song_count())[-1]", "expected": "2" },
+        { "call": "(p := Playlist(), p.add_song('A'), p.remove_song('A'), p.song_count())[-1]", "expected": "0" },
+        { "call": "(p := Playlist(), p.add_song('X'), p.songs)[-1]", "expected": "['X']" }
+      ]
+    },
+    {
+      "id": "adv-013",
+      "title": "Static Variable: Book",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Book` class: `Book(title, author)` stores both. Every time a `Book` is created, the class variable `total_books` should increase by 1. Add a method `info()` that returns `\"{title} by {author}\"`.",
+      "hint": "Same idea as a class-wide counter: use `Book.total_books += 1` inside `__init__`, not `self.total_books`.",
+      "starterCode": "class Book:\n    total_books = 0\n\n    def __init__(self, title, author):\n        # your code here\n        pass\n\n    def info(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "(setattr(Book, 'total_books', 0), Book('A', 'X'), Book('B', 'Y'), Book.total_books)[-1]", "expected": "2" },
+        { "call": "Book('Dune', 'Herbert').info()", "expected": "Dune by Herbert" },
+        { "call": "(setattr(Book, 'total_books', 0), Book('C', 'Z'), Book.total_books)[-1]", "expected": "1" }
+      ]
+    },
+    {
+      "id": "adv-014",
+      "title": "Inheritance: Employee & Manager",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete `Employee`: `Employee(name)` stores the name, and `.role()` returns `\"Employee\"`. Complete `Manager`, which inherits from `Employee`: `Manager(name, team_size)` should call `Employee.__init__` (using `super()`) and also store `team_size`. Override `.role()` on `Manager` to return `\"Manager\"`.",
+      "hint": "Inside `Manager.__init__`, call `super().__init__(name)` first, then set `self.team_size = team_size`.",
+      "starterCode": "class Employee:\n    def __init__(self, name):\n        # your code here\n        pass\n\n    def role(self):\n        # your code here\n        pass\n\n\nclass Manager(Employee):\n    def __init__(self, name, team_size):\n        # your code here\n        pass\n\n    def role(self):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Employee('Sam').role()", "expected": "Employee" },
+        { "call": "Manager('Ari', 5).role()", "expected": "Manager" },
+        { "call": "Manager('Ari', 5).name", "expected": "Ari" },
+        { "call": "Manager('Ari', 5).team_size", "expected": "5" }
+      ]
+    },
+    {
+      "id": "adv-015",
+      "title": "Inventory Item",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Item` class: `Item(name, price, quantity)` stores all three. `.total_value()` returns `price * quantity`. `.restock(amount)` adds `amount` to `quantity`.",
+      "hint": "Store all three constructor arguments as `self` attributes. `restock` just does `self.quantity += amount`.",
+      "starterCode": "class Item:\n    def __init__(self, name, price, quantity):\n        # your code here\n        pass\n\n    def total_value(self):\n        # your code here\n        pass\n\n    def restock(self, amount):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Item('Pen', 2, 10).total_value()", "expected": "20" },
+        { "call": "(i := Item('Pen', 2, 10), i.restock(5), i.quantity)[-1]", "expected": "15" },
+        { "call": "(i := Item('Book', 12, 3), i.restock(2), i.total_value())[-1]", "expected": "60" }
+      ]
+    },
+    {
+      "id": "adv-016",
+      "title": "Comparing Players",
+      "difficulty": "advanced",
+      "topics": ["oop"],
+      "prompt": "Complete the `Player` class: `Player(name, score)` stores both. Add a method `has_higher_score(other)` that returns `True` if `self`'s score is greater than `other`'s score, and `False` otherwise (including ties).",
+      "hint": "Compare `self.score` to `other.score` with `>` and return the result directly.",
+      "starterCode": "class Player:\n    def __init__(self, name, score):\n        # your code here\n        pass\n\n    def has_higher_score(self, other):\n        # your code here\n        pass",
+      "testCases": [
+        { "call": "Player('A', 50).has_higher_score(Player('B', 30))", "expected": "True" },
+        { "call": "Player('A', 20).has_higher_score(Player('B', 30))", "expected": "False" },
+        { "call": "Player('A', 30).has_higher_score(Player('B', 30))", "expected": "False" }
       ]
     }
   ]
