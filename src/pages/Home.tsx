@@ -71,7 +71,10 @@ export default function Home() {
           returning member can sit side by side and both leave having learned something.
         </p>
         <p className="mt-3 text-text-muted">
-          New members are welcome to join at any point in the year — no prior experience or application required.
+          New members are welcome to join at any point in the year — no application required. Joining right at the
+          start is the easiest way in with no experience at all; because the curriculum moves quickly, members
+          joining partway through the year should already have some basic Python experience to keep pace with the
+          group.
         </p>
         <p className="mt-4">
           <Link to="/about" className="font-medium text-accent hover:text-accent-hover">
