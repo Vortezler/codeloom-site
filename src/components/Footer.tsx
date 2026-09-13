@@ -4,6 +4,9 @@ export default function Footer() {
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-4 py-10 text-center sm:px-6">
         <img src="/codeloom-logo.png" alt="Codeloom" className="h-20 w-auto" />
         <p className="text-sm text-text-muted">Jones Middle School's Python, AI &amp; Machine Learning program.</p>
+        <p className="text-xs text-text-muted">
+          &copy; {new Date().getFullYear()} Codeloom. All rights reserved.
+        </p>
       </div>
     </footer>
   )

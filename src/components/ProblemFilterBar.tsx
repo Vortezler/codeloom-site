@@ -35,7 +35,7 @@ export default function ProblemFilterBar({
         value={search}
         onChange={(e) => onSearchChange(e.target.value)}
         placeholder="Search problems…"
-        className="w-full rounded-lg border border-border bg-surface px-4 py-2 text-sm text-text placeholder:text-text-muted focus:border-accent focus:outline-none"
+        className="w-full border border-border bg-surface px-4 py-2 text-sm text-text placeholder:text-text-muted focus:border-accent focus:outline-none"
       />
 
       <div className="flex flex-wrap items-center gap-1.5">
@@ -61,7 +61,7 @@ function Chip({ label, active, onClick }: { label: string; active: boolean; onCl
   return (
     <button
       onClick={onClick}
-      className={`rounded-full px-3 py-1 text-xs font-medium capitalize transition-colors ${
+      className={` px-3 py-1 text-xs font-medium capitalize transition-colors ${
         active ? 'bg-accent text-bg' : 'bg-surface-raised text-text-muted hover:text-text'
       }`}
     >

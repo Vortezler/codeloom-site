@@ -56,7 +56,7 @@ export default function ExternalPracticeLinks() {
                 href={link.url}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-xl border border-border bg-surface p-4 transition-colors hover:border-border-hover"
+                className="border border-border bg-surface p-4 transition-colors hover:border-border-hover"
               >
                 <p className="font-semibold text-accent">{link.name}</p>
                 <p className="mt-1 text-sm text-text-muted">{link.description}</p>

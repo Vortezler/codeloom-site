@@ -8,7 +8,7 @@ interface CodeEditorProps {
 
 export default function CodeEditor({ value, onChange }: CodeEditorProps) {
   return (
-    <div className="overflow-hidden rounded-lg border border-border">
+    <div className="overflow-hidden border border-border">
       <CodeMirror
         value={value}
         onChange={onChange}

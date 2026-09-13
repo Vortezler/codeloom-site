@@ -22,7 +22,7 @@ export default function NavBar() {
                 to={link.to}
                 end={link.end}
                 className={({ isActive }) =>
-                  `whitespace-nowrap rounded-md px-1.5 py-1.5 text-xs font-medium transition-colors sm:px-3 sm:text-sm ${
+                  `whitespace-nowrap px-1.5 py-1.5 text-xs font-medium transition-colors sm:px-3 sm:text-sm ${
                     isActive
                       ? 'bg-surface-raised text-accent'
                       : 'text-text-muted hover:bg-surface hover:text-text'

@@ -32,7 +32,7 @@ export default function About() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
+      <section className="border border-border bg-surface p-6 sm:p-8">
         <h2 className="text-xl font-bold">Club history</h2>
         <div className="mt-4 space-y-4 text-text-muted">
           <p>
@@ -56,7 +56,7 @@ export default function About() {
         </p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {strategies.map((s) => (
-            <div key={s.title} className="rounded-xl border border-border bg-surface p-5">
+            <div key={s.title} className="border border-border bg-surface p-5">
               <h3 className="font-semibold text-accent">{s.title}</h3>
               <p className="mt-1.5 text-sm text-text-muted">{s.body}</p>
             </div>

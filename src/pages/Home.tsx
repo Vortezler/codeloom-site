@@ -7,7 +7,7 @@ const schedule = scheduleData as { schoolYear: string; semesters: ScheduleSemest
 export default function Home() {
   return (
     <div className="space-y-12">
-      <section className="rounded-2xl border border-border bg-surface px-6 py-12 text-center sm:px-10">
+      <section className="border border-border bg-surface px-6 py-12 text-center sm:px-10">
         <p className="font-mono text-sm uppercase tracking-widest text-accent">
           Jones Middle School · Python, AI &amp; Machine Learning
         </p>
@@ -19,13 +19,13 @@ export default function Home() {
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
             to="/curriculum"
-            className="rounded-lg bg-accent px-5 py-2.5 font-semibold text-bg transition-colors hover:bg-accent-hover"
+            className="bg-accent px-5 py-2.5 font-semibold text-bg transition-colors hover:bg-accent-hover"
           >
             View the Curriculum
           </Link>
           <Link
             to="/practice"
-            className="rounded-lg border border-border bg-surface-raised px-5 py-2.5 font-semibold text-text transition-colors hover:border-border-hover"
+            className="border border-border bg-surface-raised px-5 py-2.5 font-semibold text-text transition-colors hover:border-border-hover"
           >
             Start Practicing
           </Link>
@@ -38,7 +38,7 @@ export default function Home() {
         <InfoCard label="Snacks" value="Included" detail="Every meeting. Yes, really." />
       </section>
 
-      <section className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
+      <section className="border border-border bg-surface p-6 sm:p-8">
         <div className="flex items-baseline justify-between gap-3">
           <h2 className="text-xl font-bold">Meeting schedule</h2>
           <span className="text-sm text-text-muted">{schedule.schoolYear}</span>
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
+      <section className="border border-border bg-surface p-6 sm:p-8">
         <h2 className="text-xl font-bold">Currently recruiting</h2>
         <p className="mt-2 text-text-muted">
           Codeloom is open to new middle-school members. Whether you've never written a line of code or you were
@@ -82,7 +82,7 @@ export default function Home() {
 
 function InfoCard({ label, value, detail }: { label: string; value: string; detail: string }) {
   return (
-    <div className="rounded-xl border border-border bg-surface p-5">
+    <div className="border border-border bg-surface p-5">
       <p className="text-xs font-semibold uppercase tracking-wide text-text-muted">{label}</p>
       <p className="mt-1 text-2xl font-bold text-teal">{value}</p>
       <p className="mt-1 text-sm text-text-muted">{detail}</p>

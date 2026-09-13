@@ -5,7 +5,7 @@ export default function UnitCard({ unit }: { unit: CurriculumUnit }) {
   return (
     <Link
       to={`/curriculum/${unit.id}`}
-      className="block rounded-xl border border-border bg-surface p-5 transition-colors hover:border-border-hover"
+      className="block border border-border bg-surface p-5 transition-colors hover:border-border-hover"
     >
       <h3 className="font-bold text-text">{unit.title}</h3>
       <p className="mt-1.5 text-sm text-text-muted">{unit.summary}</p>

@@ -43,7 +43,7 @@ export default function CurriculumUnit() {
         <p className="mt-2 max-w-2xl text-text-muted">{unit.summary}</p>
       </div>
 
-      <section className="rounded-2xl border border-border bg-surface p-6">
+      <section className="border border-border bg-surface p-6">
         <h2 className="font-bold">Concepts covered</h2>
         <ul className="mt-3 list-inside list-disc space-y-1.5 text-text-muted">
           {unit.concepts.map((c) => (
@@ -53,7 +53,7 @@ export default function CurriculumUnit() {
       </section>
 
       {unit.projects.length > 0 && (
-        <section className="rounded-2xl border border-border bg-surface p-6">
+        <section className="border border-border bg-surface p-6">
           <h2 className="font-bold">Projects</h2>
           <div className="mt-3 space-y-4">
             {unit.projects.map((p) => (
@@ -66,7 +66,7 @@ export default function CurriculumUnit() {
         </section>
       )}
 
-      <section className="rounded-2xl border border-dashed border-border p-6">
+      <section className="border border-dashed border-border p-6">
         <h2 className="font-bold text-text-muted">Lesson notes</h2>
         <p className="mt-2 whitespace-pre-wrap text-sm italic text-text-muted">{unit.lessonNotes}</p>
       </section>
@@ -74,7 +74,7 @@ export default function CurriculumUnit() {
       {topic && (
         <Link
           to={`/practice?topic=${topic}`}
-          className="inline-block rounded-lg bg-accent px-5 py-2.5 font-semibold text-bg transition-colors hover:bg-accent-hover"
+          className="inline-block bg-accent px-5 py-2.5 font-semibold text-bg transition-colors hover:bg-accent-hover"
         >
           Practice these concepts →
         </Link>

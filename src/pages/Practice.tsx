@@ -61,7 +61,7 @@ export default function Practice() {
           {filtered.length} problem{filtered.length === 1 ? '' : 's'}
         </p>
         {filtered.length === 0 && (
-          <p className="rounded-lg border border-dashed border-border p-6 text-center text-sm text-text-muted">
+          <p className="border border-dashed border-border p-6 text-center text-sm text-text-muted">
             No problems match those filters yet.
           </p>
         )}

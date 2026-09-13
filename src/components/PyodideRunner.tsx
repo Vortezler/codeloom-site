@@ -67,7 +67,7 @@ export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerPro
         <button
           onClick={handleRun}
           disabled={running || envStatus === 'error'}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50"
+          className="bg-accent px-4 py-2 text-sm font-semibold text-bg transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50"
         >
           {running ? 'Running…' : 'Run'}
         </button>
@@ -77,7 +77,7 @@ export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerPro
             setResult(null)
             setRunError(null)
           }}
-          className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
+          className="border border-border px-4 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
         >
           Reset to starter code
         </button>
@@ -85,11 +85,11 @@ export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerPro
       </div>
 
       {runError && (
-        <p className="rounded-lg border border-danger/40 bg-danger/10 px-4 py-3 text-sm text-danger">{runError}</p>
+        <p className="border border-danger/40 bg-danger/10 px-4 py-3 text-sm text-danger">{runError}</p>
       )}
 
       {result?.loadError && (
-        <div className="rounded-lg border border-danger/40 bg-danger/10 px-4 py-3">
+        <div className="border border-danger/40 bg-danger/10 px-4 py-3">
           <p className="text-sm font-semibold text-danger">Your code didn't run:</p>
           <pre className="mt-1 whitespace-pre-wrap font-mono text-xs text-danger">{result.loadError}</pre>
         </div>
@@ -103,7 +103,7 @@ export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerPro
             return (
               <div
                 key={i}
-                className={`rounded-lg border px-4 py-3 text-sm ${
+                className={` border px-4 py-3 text-sm ${
                   pass ? 'border-success/40 bg-success/10' : 'border-danger/40 bg-danger/10'
                 }`}
               >
@@ -121,7 +121,7 @@ export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerPro
             )
           })}
           {result.stdout && (
-            <div className="rounded-lg border border-border bg-surface-raised px-4 py-3">
+            <div className="border border-border bg-surface-raised px-4 py-3">
               <p className="text-xs font-semibold uppercase tracking-wide text-text-muted">Printed output</p>
               <pre className="mt-1 whitespace-pre-wrap font-mono text-xs text-text-muted">{result.stdout}</pre>
             </div>

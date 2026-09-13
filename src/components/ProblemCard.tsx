@@ -25,7 +25,7 @@ export default function ProblemCard({ problem, isSolved, onSolved }: ProblemCard
   const [showHint, setShowHint] = useState(false)
 
   return (
-    <div className="rounded-xl border border-border bg-surface">
+    <div className="border border-border bg-surface">
       <button
         onClick={() => setOpen((o) => !o)}
         className="flex w-full items-start justify-between gap-3 px-5 py-4 text-left"
@@ -36,11 +36,11 @@ export default function ProblemCard({ problem, isSolved, onSolved }: ProblemCard
             {isSolved && <span className="text-sm text-success">✓ Solved</span>}
           </div>
           <div className="mt-1.5 flex flex-wrap gap-1.5">
-            <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${DIFFICULTY_STYLES[problem.difficulty]}`}>
+            <span className={` px-2 py-0.5 text-xs font-medium ${DIFFICULTY_STYLES[problem.difficulty]}`}>
               {DIFFICULTY_LABEL[problem.difficulty]}
             </span>
             {problem.topics.map((t) => (
-              <span key={t} className="rounded-full bg-surface-raised px-2 py-0.5 text-xs font-medium text-text-muted">
+              <span key={t} className="bg-surface-raised px-2 py-0.5 text-xs font-medium text-text-muted">
                 {t}
               </span>
             ))}
@@ -57,13 +57,13 @@ export default function ProblemCard({ problem, isSolved, onSolved }: ProblemCard
               onClick={() => setShowHint((h) => !h)}
               aria-label={showHint ? 'Hide hint' : 'Show hint'}
               title={showHint ? 'Hide hint' : 'Show hint'}
-              className="shrink-0 rounded-full border border-border p-1.5 text-base leading-none hover:border-border-hover"
+              className="shrink-0 border border-border p-1.5 text-base leading-none hover:border-border-hover"
             >
               💡
             </button>
           </div>
           {showHint && (
-            <p className="rounded-lg border border-teal-muted bg-teal-muted/40 px-4 py-3 text-sm text-teal">
+            <p className="border border-teal-muted bg-teal-muted/40 px-4 py-3 text-sm text-teal">
               {problem.hint}
             </p>
           )}
