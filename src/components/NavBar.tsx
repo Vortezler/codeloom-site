@@ -7,34 +7,46 @@ const links = [
   { to: '/practice', label: 'Practice' },
 ]
 
+const topLinkClass = ({ isActive }: { isActive: boolean }) =>
+  `whitespace-nowrap px-3 py-1.5 text-sm font-medium transition-colors ${
+    isActive ? 'bg-surface-raised text-accent' : 'text-text-muted hover:bg-surface hover:text-text'
+  }`
+
+const bottomLinkClass = ({ isActive }: { isActive: boolean }) =>
+  `flex flex-1 flex-col items-center justify-center py-2 text-xs font-medium ${
+    isActive ? 'text-accent' : 'text-text-muted'
+  }`
+
 export default function NavBar() {
   return (
-    <header className="sticky top-0 z-20 border-b border-border bg-bg/95 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
-        <NavLink to="/" className="flex shrink-0 items-center gap-1.5 text-lg font-bold tracking-tight text-text">
-          <img src="/codeloom-logo-mark.png" alt="" className="h-8 w-8 shrink-0" />
-          <span className="hidden sm:inline">Codeloom</span>
-        </NavLink>
-        <ul className="flex items-center gap-0.5 sm:gap-2">
-          {links.map((link) => (
-            <li key={link.to}>
-              <NavLink
-                to={link.to}
-                end={link.end}
-                className={({ isActive }) =>
-                  `whitespace-nowrap px-1.5 py-1.5 text-xs font-medium transition-colors sm:px-3 sm:text-sm ${
-                    isActive
-                      ? 'bg-surface-raised text-accent'
-                      : 'text-text-muted hover:bg-surface hover:text-text'
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+    <>
+      {/* Top bar: logo everywhere, full link row on tablet/desktop only. */}
+      <header className="sticky top-0 z-20 border-b border-border bg-bg/95 backdrop-blur">
+        <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
+          <NavLink to="/" className="flex shrink-0 items-center gap-1.5 text-lg font-bold tracking-tight text-text">
+            <img src="/codeloom-logo-mark.png" alt="" className="h-8 w-8 shrink-0" />
+            <span>Codeloom</span>
+          </NavLink>
+          <ul className="hidden items-center gap-1 sm:flex">
+            {links.map((link) => (
+              <li key={link.to}>
+                <NavLink to={link.to} end={link.end} className={topLinkClass}>
+                  {link.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+
+      {/* Bottom tab bar: phone-width only, replaces the top link row for easier thumb reach. */}
+      <nav className="bottom-tab-bar fixed inset-x-0 bottom-0 z-20 flex border-t border-border bg-bg/95 backdrop-blur sm:hidden">
+        {links.map((link) => (
+          <NavLink key={link.to} to={link.to} end={link.end} className={bottomLinkClass}>
+            {link.label}
+          </NavLink>
+        ))}
       </nav>
-    </header>
+    </>
   )
 }

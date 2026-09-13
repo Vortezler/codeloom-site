@@ -13,7 +13,7 @@ const Practice = lazy(() => import('./pages/Practice'))
 
 function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col bg-bg text-text">
+    <div className="flex min-h-screen flex-col bg-bg text-text pb-16 sm:pb-0">
       <NavBar />
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">{children}</main>
       <Footer />

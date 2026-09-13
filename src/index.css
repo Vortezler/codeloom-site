@@ -26,6 +26,11 @@ body {
   color: var(--color-text);
 }
 
+/* Keeps the mobile bottom tab bar clear of the iOS home-indicator area */
+.bottom-tab-bar {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 /* CodeMirror container sizing */
 .cm-editor {
   height: 100%;
