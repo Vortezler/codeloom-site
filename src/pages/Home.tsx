@@ -65,10 +65,13 @@ export default function Home() {
       <section className="border border-border bg-surface p-6 sm:p-8">
         <h2 className="text-xl font-bold">Currently recruiting</h2>
         <p className="mt-2 text-text-muted">
-          Codeloom is open to new middle-school members. Whether you've never written a line of code or you were
-          part of Codeloom last year, there's a place for you — new students start from the beginning, and
-          returning students pick up right where the curriculum leaves off. Come to the interest meeting to sign
-          up.
+          Codeloom welcomes all skill levels. The curriculum and teaching style are specifically designed to adapt
+          to varying levels of experience and account for gaps, so no one is left behind and no one is held back.
+          Scaffolded starter code, concept refreshers, and mentor support mean a first-time programmer and a
+          returning member can sit side by side and both leave having learned something.
+        </p>
+        <p className="mt-3 text-text-muted">
+          New members are welcome to join at any point in the year — no prior experience or application required.
         </p>
         <p className="mt-4">
           <Link to="/about" className="font-medium text-accent hover:text-accent-hover">
