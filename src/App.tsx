@@ -1,6 +1,7 @@
 import { Suspense, lazy, type ReactNode } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Curriculum from './pages/Curriculum'
@@ -15,6 +16,7 @@ function Layout({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen flex-col bg-bg text-text">
       <NavBar />
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">{children}</main>
+      <Footer />
     </div>
   )
 }
