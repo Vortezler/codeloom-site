@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import PythonMark from './PythonMark'
 
 const links = [
   { to: '/', label: 'Home', end: true },
@@ -12,7 +13,7 @@ export default function NavBar() {
     <header className="sticky top-0 z-20 border-b border-border bg-bg/95 backdrop-blur">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
         <NavLink to="/" className="flex shrink-0 items-center gap-1.5 text-lg font-bold tracking-tight text-text">
-          <span className="text-accent">&lt;/&gt;</span>
+          <PythonMark className="h-6 w-6 shrink-0" />
           <span className="hidden sm:inline">Codeloom</span>
         </NavLink>
         <ul className="flex items-center gap-0.5 sm:gap-2">

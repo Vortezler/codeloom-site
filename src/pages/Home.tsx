@@ -8,11 +8,13 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <section className="rounded-2xl border border-border bg-surface px-6 py-12 text-center sm:px-10">
-        <p className="font-mono text-sm uppercase tracking-widest text-accent">Jones Middle School · Python Club</p>
+        <p className="font-mono text-sm uppercase tracking-widest text-accent">
+          Jones Middle School · Python, AI &amp; Machine Learning
+        </p>
         <h1 className="mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">Codeloom</h1>
         <p className="mx-auto mt-4 max-w-2xl text-balance text-text-muted">
-          Codeloom is Jones Middle School's Python programming club. We meet biweekly to build real projects, learn
-          core programming concepts, and level up together — no experience required.
+          Codeloom is Jones Middle School's Python, AI, and Machine Learning program. We meet biweekly to build
+          real projects, learn core programming concepts, and level up together — no experience required.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link

@@ -25,7 +25,7 @@
           "description": "Print a realistic restaurant receipt showing menu items, prices, subtotal, tax, and final total — built with operators."
         }
       ],
-      "lessonNotes": "[TODO: fill in lesson content]"
+      "lessonNotes": "Every member's first lesson: the print() function, and how a Python program is really just a list of instructions run top to bottom. We cover the core data types (strings, integers, floats, booleans) and the rules for working with each one — like why \"2\" + \"2\" behaves differently than 2 + 2. From there we practice arithmetic and comparison operators, formatting output with the newline character (\\n), and combining multiple data types inside a single print statement using commas and f-strings. By the end of the unit, everyone can build a program that displays clean, organized information — the foundation every later unit builds on."
     },
     {
       "id": "unit-2",
@@ -51,7 +51,7 @@
           "description": "Collect a username, password, and bio, then display a profile that also analyzes the username — its length, an uppercase version, and a lowercase version — using string methods and booleans."
         }
       ],
-      "lessonNotes": "[TODO: fill in lesson content]"
+      "lessonNotes": "This unit turns programs from one-way (just printing) into two-way: we introduce input(), and the very first gotcha every member hits — input() always returns a string, so numbers typed in have to be converted with int() or float() before you can do math with them. From there we go deep on strings themselves: concatenation, indexing individual characters, slicing out substrings, and escape characters like \\n and \\t. We wrap up with string methods that return booleans — .isdigit(), .isalpha(), and comparing .upper()/.lower() versions of text — which sets members up to validate and analyze whatever a user types in."
     },
     {
       "id": "unit-3",
@@ -75,11 +75,11 @@
           "description": "Build a menu or store with items stored in a dictionary (item: price). Let the user add items to a cart list, then print a receipt with subtotal, 5% tax, and total."
         },
         {
-          "title": "[TODO: add project name]",
-          "description": "[TODO: not yet defined]"
+          "title": "Class Roster & Grade Book",
+          "description": "Store a class roster as a nested dictionary (student name → list of grades). Use math functions to calculate each student's average and the class average, and the random module to randomly pick a 'student of the day' to spotlight."
         }
       ],
-      "lessonNotes": "[TODO: fill in lesson content]"
+      "lessonNotes": "With strings and numbers covered, this unit is about organizing many pieces of data at once. We go through each collection type — lists (ordered, changeable), tuples (ordered, locked), dictionaries (key-value pairs), and sets (unique, unordered) — and when to reach for each one. Members practice nesting collections inside each other (a list of dictionaries, a dictionary of lists) to model real, messy data. We also bring in two useful modules: random, for anything involving chance or shuffling, and math, for calculations beyond basic arithmetic (square roots, rounding, and more)."
     },
     {
       "id": "unit-4",
@@ -109,7 +109,7 @@
           "description": "The Unit 1 receipt project again, but now interactive — take menu items via input and use loops over lists to build and print the receipt."
         }
       ],
-      "lessonNotes": "[TODO: fill in lesson content]"
+      "lessonNotes": "This is the unit where programs stop running once, top to bottom, and start making decisions and repeating themselves. We cover if/elif/else for branching logic, then for loops (repeating a known number of times, usually over a collection) and while loops (repeating until a condition changes — the natural fit for 'keep asking until they get it right' style games). We also practice nested loops, and combining loops with conditionals — the exact pattern behind every game in this unit's project list, where the program has to keep track of state, check conditions, and react differently each round."
     },
     {
       "id": "unit-5",
@@ -129,11 +129,11 @@
           "description": "Calculate and display the average rating for a movie from a set of individual ratings."
         },
         {
-          "title": "[TODO: add project name]",
-          "description": "[TODO: not yet defined]"
+          "title": "Unit Converter Toolbox",
+          "description": "Build a menu-driven unit converter with a custom function for each conversion (temperature, distance, weight). The main program calls the right function based on the user's menu choice, reinforcing how to write and reuse functions."
         }
       ],
-      "lessonNotes": "[TODO: fill in lesson content]"
+      "lessonNotes": "By now members have used plenty of built-in functions without necessarily thinking of them that way — this unit makes it official, revisiting range(), the string methods from Unit 2, and others through the lens of 'a function takes input and gives back output.' Then we flip to writing our own with def: naming a function well, defining parameters, and returning a value instead of just printing one. The big shift this unit teaches is breaking a program into small, reusable, well-named pieces instead of one long block of code — which is exactly what makes the projects below manageable instead of overwhelming."
     },
     {
       "id": "unit-6",
@@ -156,11 +156,11 @@
           "description": "A Battleship game where both the player and computer get randomly placed ships, and the player must sink all computer ships before theirs are sunk."
         },
         {
-          "title": "[TODO: add project name]",
-          "description": "[TODO: not yet defined]"
+          "title": "Virtual Pet Simulator",
+          "description": "Build a Pet class with attributes like hunger, happiness, and energy, plus methods like feed(), play(), and sleep() that update them over time. Create subclasses for different pet types with their own quirks (inheritance), and track the total number of pets created with a class variable."
         }
       ],
-      "lessonNotes": "[TODO: fill in lesson content]"
+      "lessonNotes": "The capstone unit: instead of variables and functions floating separately, we bundle both together into classes — a blueprint for an object that has its own data (attributes) and its own behavior (methods). We cover the __init__ constructor for setting up a new object, writing methods that use self to access an object's own data, inheritance for sharing behavior between related classes (like a Dog and Cat both being Animals), and static/class variables for data shared across every instance of a class. This is the same toolkit used to build the boss-fight, Battleship, and virtual pet projects — each one models something real as a set of interacting objects."
     }
   ]
 }
