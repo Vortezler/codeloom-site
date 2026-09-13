@@ -5,7 +5,7 @@
       "name": "Semester 1",
       "year": 2026,
       "meetings": [
-        { "date": "August 25", "label": "Interest Meeting" },
+        { "date": "August 25" },
         { "date": "September 8" },
         { "date": "September 22" },
         { "date": "October 6" },
