@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import CodeEditor from './CodeEditor'
 import { ensureReady, runStudentCode, type RunResult } from '../lib/pyodideClient'
+import { getSavedCode, saveCode } from '../lib/codeStorage'
+import { pushSnapshot, getLatestSnapshot } from '../lib/autosaveHistory'
 import type { Problem } from '../types'
 
 interface PyodideRunnerProps {
@@ -10,12 +12,23 @@ interface PyodideRunnerProps {
 
 type EnvStatus = 'loading' | 'ready' | 'error'
 
+const SAVE_DEBOUNCE_MS = 800
+const AUTOSAVE_INTERVAL_MS = 30000
+
 export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerProps) {
-  const [code, setCode] = useState(problem.starterCode)
+  const [code, setCode] = useState(() => getSavedCode(problem.id) ?? problem.starterCode)
   const [envStatus, setEnvStatus] = useState<EnvStatus>('loading')
   const [running, setRunning] = useState(false)
   const [result, setResult] = useState<RunResult | null>(null)
   const [runError, setRunError] = useState<string | null>(null)
+  const [recoverable, setRecoverable] = useState(() => {
+    const snapshot = getLatestSnapshot(problem.id)
+    const saved = getSavedCode(problem.id) ?? problem.starterCode
+    return snapshot && snapshot.code !== saved ? snapshot : null
+  })
+
+  const saveTimeoutRef = useRef<number | null>(null)
+  const lastSnapshotCodeRef = useRef<string | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -31,6 +44,28 @@ export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerPro
       cancelled = true
     }
   }, [])
+
+  // Long-term save: persists to localStorage (survives closing the tab for months), debounced per keystroke.
+  useEffect(() => {
+    if (saveTimeoutRef.current) window.clearTimeout(saveTimeoutRef.current)
+    saveTimeoutRef.current = window.setTimeout(() => {
+      saveCode(problem.id, code)
+    }, SAVE_DEBOUNCE_MS)
+    return () => {
+      if (saveTimeoutRef.current) window.clearTimeout(saveTimeoutRef.current)
+    }
+  }, [code, problem.id])
+
+  // Short-term safety net: periodic snapshots in sessionStorage, in case of an accidental clear or reset.
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      if (code !== problem.starterCode && code !== lastSnapshotCodeRef.current) {
+        pushSnapshot(problem.id, code)
+        lastSnapshotCodeRef.current = code
+      }
+    }, AUTOSAVE_INTERVAL_MS)
+    return () => window.clearInterval(interval)
+  }, [code, problem.id, problem.starterCode])
 
   const retryLoad = () => {
     setEnvStatus('loading')
@@ -59,8 +94,39 @@ export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerPro
     }
   }
 
+  const handleReset = () => {
+    if (code !== problem.starterCode && !window.confirm('Reset to starter code? This will discard your current code.')) {
+      return
+    }
+    setCode(problem.starterCode)
+    saveCode(problem.id, problem.starterCode)
+    setResult(null)
+    setRunError(null)
+    setRecoverable(null)
+  }
+
+  const handleRestore = () => {
+    if (!recoverable) return
+    setCode(recoverable.code)
+    setRecoverable(null)
+  }
+
   return (
     <div className="space-y-4">
+      {recoverable && (
+        <div className="flex flex-wrap items-center justify-between gap-2 border border-teal-muted bg-teal-muted/40 px-4 py-3 text-sm text-teal">
+          <span>An autosaved version of your code from this session is available.</span>
+          <div className="flex gap-2">
+            <button onClick={handleRestore} className="font-semibold underline">
+              Restore it
+            </button>
+            <button onClick={() => setRecoverable(null)} className="text-text-muted">
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
+
       <CodeEditor value={code} onChange={setCode} />
 
       <div className="flex flex-wrap items-center gap-3">
@@ -72,11 +138,7 @@ export default function PyodideRunner({ problem, onAllPassed }: PyodideRunnerPro
           {running ? 'Running…' : 'Run'}
         </button>
         <button
-          onClick={() => {
-            setCode(problem.starterCode)
-            setResult(null)
-            setRunError(null)
-          }}
+          onClick={handleReset}
           className="border border-border px-4 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
         >
           Reset to starter code
